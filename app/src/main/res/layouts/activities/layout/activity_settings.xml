@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:theme="@style/Theme.SmartScale.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:contentInsetStart="0dp"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/Theme.SmartScale.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/actionBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
+                    android:paddingStart="26dp"
+                    android:paddingEnd="26dp"
+                    app:srcCompat="@mipmap/title_bar_logo_back_gray" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:text="Settings"
+                    android:textColor="@color/md_grey_850"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_50"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/md_grey_200" />
+
+                <com.waltonbd.smartscale.custom.TextViewDrawableSize
+                    android:id="@+id/changeUnit"
+                    style="@style/TextAppearance.ItemList"
+                    android:gravity="center_vertical"
+                    android:text="Change Unit"
+                    app:drawableLeftCompat="@drawable/ic_setting_weight"
+                    app:drawableRightCompat="@drawable/ic_right_arrow_grey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@color/md_grey_200" />
+
+                <com.waltonbd.smartscale.custom.TextViewDrawableSize
+                    android:id="@+id/deviceManagement"
+                    style="@style/TextAppearance.ItemList"
+                    android:gravity="center_vertical"
+                    android:text="Device Management"
+                    app:drawableLeftCompat="@drawable/ic_setting_device"
+                    app:drawableRightCompat="@drawable/ic_right_arrow_grey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@color/md_grey_200" />
+
+                <com.waltonbd.smartscale.custom.TextViewDrawableSize
+                    android:id="@+id/understandingMeasurement"
+                    style="@style/TextAppearance.ItemList"
+                    android:gravity="center_vertical"
+                    android:text="Understanding Measurement"
+                    app:drawableLeftCompat="@drawable/ic_setting_individuation"
+                    app:drawableRightCompat="@drawable/ic_right_arrow_grey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/md_grey_200" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/md_grey_200" />
+
+            <com.waltonbd.smartscale.custom.TextViewDrawableSize
+                android:id="@+id/aboutUs"
+                style="@style/TextAppearance.ItemList"
+                android:gravity="center_vertical"
+                android:text="About"
+                app:drawableLeftCompat="@drawable/ic_setting_about"
+                app:drawableRightCompat="@drawable/ic_right_arrow_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:background="@color/md_grey_200" />
+
+            <com.waltonbd.smartscale.custom.TextViewDrawableSize
+                android:id="@+id/contactUs"
+                style="@style/TextAppearance.ItemList"
+                android:text="Contact Us"
+                app:drawableLeftCompat="@drawable/ic_setting_feedback"
+                app:drawableRightCompat="@drawable/ic_right_arrow_grey" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:background="@color/md_grey_200" />
+
+            <com.waltonbd.smartscale.custom.TextViewDrawableSize
+                android:id="@+id/deleteAccount"
+                style="@style/TextAppearance.ItemList"
+                android:gravity="center_vertical"
+                android:text="Delete Account"
+                app:drawableLeftCompat="@drawable/ic_setting_delete_account"
+                app:drawableRightCompat="@drawable/ic_right_arrow_grey" />-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:background="@color/md_grey_200" />
+
+            <com.waltonbd.smartscale.custom.TextViewDrawableSize
+                android:id="@+id/policies"
+                style="@style/TextAppearance.ItemList"
+                android:gravity="center_vertical"
+                android:text="Legal &amp; Policies"
+                app:drawableLeftCompat="@drawable/ic_setting_terms"
+                app:drawableRightCompat="@drawable/ic_right_arrow_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_200" />
+
+            <Button
+                android:id="@+id/logoutBtn"
+                style="@style/MyButtonStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_style_round"
+                android:text="Log Out" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

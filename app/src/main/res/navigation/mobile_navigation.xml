@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/measurementFragment">
+
+    <fragment
+        android:id="@+id/measurementFragment"
+        android:name="com.waltonbd.smartscale.ui.measurements.MeasurementsFragment"
+        android:label="@string/title_measurements"
+        tools:layout="@layout/fragment_measurements" />
+
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.waltonbd.smartscale.ui.tracking.TrackingFragment"
+        android:label="@string/title_tracking"
+        tools:layout="@layout/fragment_tracking" />
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.waltonbd.smartscale.ui.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
+</navigation>

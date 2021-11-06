@@ -1,0 +1,14 @@
+
+SharedPreferencesManager.init(getApplicationContext());
+
+Write data
+
+    SharedPreferencesManager.write(SharedPreferencesManager.NAME, "XXXX");//save string in shared preference.
+
+Read Data
+
+    String name = SharedPref.read(SharedPreferencesManager.NAME, null);//read string in shared preference.
+
+Output
+
+Name : "XXXX";

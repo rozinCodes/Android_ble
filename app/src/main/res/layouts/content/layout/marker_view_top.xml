@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rvContent"
+    android:layout_width="100dp"
+    android:layout_height="60dp"
+    android:background="@drawable/marker_black_bg"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chart_data_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="11/19/20"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <!--<TextView
+            android:id="@+id/chart_data_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="82.70 kg"
+            android:textColor="@color/white"
+            android:textSize="14sp" />-->
+
+        <com.waltonbd.smartscale.widget.TextScriptView
+            android:id="@+id/chart_data_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:normalText="82.70"
+            app:normalTextColor="@color/white"
+            app:normalTextSize="14sp"
+            app:subText="kg"
+            app:subTextColor="@color/white"
+            app:superText=" " />
+
+    </LinearLayout>
+
+    <!--<ImageView
+        android:id="@+id/marker_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:src="@drawable/icon_white_arrow_right" />-->
+
+</RelativeLayout>

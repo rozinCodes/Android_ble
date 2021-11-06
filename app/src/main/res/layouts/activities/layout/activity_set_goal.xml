@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SetGoalActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:theme="@style/Theme.SmartScale.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:contentInsetStart="0dp"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/Theme.SmartScale.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/actionBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
+                    android:paddingStart="26dp"
+                    android:paddingEnd="26dp"
+                    app:srcCompat="@mipmap/title_bar_logo_back_gray" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:text="Set Goal"
+                    android:textColor="@color/md_grey_850"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_50"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/confirmBtn_Rly"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="42dp"
+                    android:includeFontPadding="false"
+                    android:text="Weight"
+                    android:textColor="@color/md_grey_850"
+                    android:textSize="16sp" />
+
+                <com.waltonbd.smartscale.widget.TextScriptView
+                    android:id="@+id/tv_info_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:includeFontPadding="false"
+                    app:normalBetweenScriptMargin="4dp"
+                    app:normalText="60.0"
+                    app:normalTextColor="@color/colorPrimary"
+                    app:normalTextSize="28sp"
+                    app:subText="kg"
+                    app:subTextColor="@color/md_grey_550"
+                    app:subTextSize="17sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <com.waltonbd.smartscale.widget.RulerView
+                        android:id="@+id/ruler_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:alphaEnable="false"
+                        app:lineColor="@color/colorGrey"
+                        app:lineMaxHeight="40dp"
+                        app:lineMidHeight="30dp"
+                        app:lineMinHeight="20dp"
+                        app:lineSpaceWidth="7dp"
+                        app:lineWidth="2dip"
+                        app:maxValue="180"
+                        app:minValue="2"
+                        app:perValue="0.1"
+                        app:selectorValue="60"
+                        app:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/info_ruler" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="42dp"
+                    android:includeFontPadding="false"
+                    android:text="Body Fat"
+                    android:textColor="@color/md_grey_850"
+                    android:textSize="16sp" />
+
+                <com.waltonbd.smartscale.widget.TextScriptView
+                    android:id="@+id/tv_info_body_fat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:includeFontPadding="false"
+                    app:normalBetweenScriptMargin="4dp"
+                    app:normalText="16.0"
+                    app:normalTextColor="@color/colorPrimary"
+                    app:normalTextSize="28sp"
+                    app:subText="%"
+                    app:subTextColor="@color/md_grey_550"
+                    app:subTextSize="17sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <com.waltonbd.smartscale.widget.RulerView
+                        android:id="@+id/ruler_body_fat"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:alphaEnable="false"
+                        app:lineColor="@color/colorGrey"
+                        app:lineMaxHeight="40dp"
+                        app:lineMidHeight="30dp"
+                        app:lineMinHeight="20dp"
+                        app:lineSpaceWidth="7dp"
+                        app:lineWidth="2dip"
+                        app:maxValue="70"
+                        app:minValue="6"
+                        app:perValue="0.1"
+                        app:selectorValue="16"
+                        app:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/info_ruler" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/confirmBtn_Rly"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/confirmBtn"
+                style="@style/MyButtonStyle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_style_round"
+                android:text="Confirm" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

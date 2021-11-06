@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="45dp"
+                android:text="6.0%" />
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="35dp"
+                android:text="13.0%" />
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="40dp"
+                android:text="17.0%" />
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="35dp"
+                android:text="25.0%" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/bar_body_fat" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="6dp"
+                android:text="Essential Fat" />
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="16dp"
+                android:text="Athletes" />
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="24dp"
+                android:text="Fitness" />
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="Acceptables" />
+
+            <TextView
+                style="@style/bar_text_style"
+                android:layout_marginLeft="16dp"
+                android:text="Obesity" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/bar_desc_style"
+        android:layout_marginTop="16dp"
+        android:text="@string/bar_text_body_fat" />
+
+</LinearLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="registerViewModel"
+            type="com.waltonbd.smartscale.viewmodels.RegistrationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/actionBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/ripple_effect"
+                android:paddingStart="26dp"
+                android:paddingEnd="26dp"
+                app:srcCompat="@mipmap/title_bar_logo_back_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:maxLength="24"
+                android:maxLines="1"
+                android:text="Sign Up"
+                android:textColor="@color/md_grey_800"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <View
+                    style="@style/user_register_line_style"
+                    android:layout_below="@+id/emailEt" />
+
+                <com.waltonbd.smartscale.widget.EditTextWithClear
+                    android:id="@+id/emailEt"
+                    style="@style/user_register"
+                    android:layout_marginEnd="20dp"
+                    app:drawableStartCompat="@drawable/user_register_email"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:text="@={registerViewModel.email}" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/PhoneNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:visibility="gone">
+
+                <View
+                    style="@style/user_register_line_style"
+                    android:layout_below="@+id/phoneNumberEt" />
+
+                <ImageView
+                    android:id="@+id/phoneNumberImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_phone" />
+
+                <TextView
+                    android:id="@+id/defaultAreaCodeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/phoneNumberImage"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/lineView"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/defaultAreaCodeTv"
+                    android:background="@color/md_grey_250" />
+
+                <com.waltonbd.smartscale.widget.EditTextWithClear
+                    android:id="@+id/phoneNumberEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/lineView"
+                    android:background="@null"
+                    android:hint="Phone number"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <View
+                    style="@style/user_register_line_style"
+                    android:layout_below="@+id/passwordEt" />
+
+                <com.waltonbd.smartscale.widget.EditTextWithClear
+                    android:id="@+id/passwordEt"
+                    style="@style/user_register"
+                    android:hint="Password (6-16 characters)"
+                    android:inputType="textPassword"
+                    android:text="@={registerViewModel.password}"
+                    app:drawableStartCompat="@drawable/user_register_password" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <com.waltonbd.smartscale.widget.EditTextWithClear
+                    android:id="@+id/surePwdEt"
+                    style="@style/user_register"
+                    app:drawableStartCompat="@drawable/user_register_sure_password"
+                    android:hint="Confirm Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:text="@={registerViewModel.surePassword}" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loginTvLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <TextView
+                android:id="@+id/loginTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="end"
+                android:text="I already have an account"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/PrivacyPolicy_Lly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/check_PrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/md_grey_100"
+                android:button="@drawable/checkbox_custom_bg"
+                android:paddingStart="8dp"
+                android:text="I agree to this Privacy Policy"
+                android:textColor="@color/md_grey_800"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/terms_of_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Terms of Use"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Privacy Policy"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/nextBtn"
+                style="@style/MyButtonStyle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_style_round"
+                android:onClick="@{()-> registerViewModel.onNextClicked()}"
+                android:text="Next" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/agreementTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:text="Click Next to agree"
+                android:textColor="@color/textPrimary" />
+
+            <TextView
+                android:id="@+id/privacyPolicyTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Privecy Policy"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/feedBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="7dp"
+                android:gravity="center"
+                android:text="Contact Us"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

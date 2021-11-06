@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:theme="@style/Theme.SmartScale.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:contentInsetStart="0dp"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/Theme.SmartScale.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/actionBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
+                    android:paddingStart="26dp"
+                    android:paddingEnd="26dp"
+                    app:srcCompat="@mipmap/title_bar_logo_back_gray" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:text="Profile"
+                    android:textColor="@color/md_grey_850"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_100"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/l_user_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_head"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/register_photo"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/genderRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/registerManRb"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/register_man_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:tag="male" />
+
+                    <Space
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent" />
+
+                    <RadioButton
+                        android:id="@+id/registerWomanRb"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/register_woman_selector"
+                        android:button="@null"
+                        android:tag="female" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Male"
+                        android:textColor="@color/md_grey_700"
+                        android:textSize="16sp" />
+
+                    <Space
+                        android:layout_width="145dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Female"
+                        android:textColor="@color/md_grey_700"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/nameLly"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/user_info_style_text"
+                        app:drawableStartCompat="@drawable/register_username" />
+
+                    <EditText
+                        android:id="@+id/nameEt"
+                        style="@style/user_text_style"
+                        android:hint="Name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapWords"
+                        android:maxLength="20"
+                        tools:text="Chayan Mistry" />
+
+                </LinearLayout>
+
+                <View style="@style/edit_user_line_style" />
+
+                <LinearLayout
+                    android:id="@+id/l_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/user_info_style_text"
+                        app:drawableStartCompat="@drawable/register_birthday" />
+
+                    <TextView
+                        android:id="@+id/ageTv"
+                        style="@style/user_text_style"
+                        android:hint="Birthday"
+                        tools:text="Oct 15, 1995" />
+                </LinearLayout>
+
+                <View style="@style/edit_user_line_style" />
+
+                <LinearLayout
+                    android:id="@+id/l_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/user_info_style_text"
+                        app:drawableStartCompat="@drawable/register_height" />
+
+                    <TextView
+                        android:id="@+id/heightTv"
+                        style="@style/user_text_style"
+                        android:hint="Height"
+                        tools:text="5&#39;10&#34;" />
+
+                    <TextView
+                        android:id="@+id/heightCm"
+                        style="@style/user_text_style"
+                        android:layout_marginEnd="26dp"
+                        android:gravity="end"
+                        android:textSize="14sp"
+                        tools:text="(127cm)" />
+                </LinearLayout>
+
+                <View style="@style/edit_user_line_style" />
+
+                <RelativeLayout
+                    android:id="@+id/athleteRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:drawablePadding="20dp"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:text="@string/athlete_modle"
+                        android:textSize="19sp"
+                        app:drawableStartCompat="@drawable/user_athlete_model" />
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/athleteSb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="25dp"
+                        app:sb_show_indicator="false" />
+                </RelativeLayout>
+
+                <View style="@style/edit_user_line_style" />
+
+                <RelativeLayout
+                    android:id="@+id/athleteRl_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/athlete_modle_desc" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/gdpr_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/user_info_hint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/l_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        style="@style/user_info_style_text"
+                        android:layout_width="wrap_content"
+                        android:text="Change Password" />
+
+                    <ImageView
+                        style="@style/user_info_style_arrow"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/system_setting_arrow" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirmBtn"
+                style="@style/MyButtonStyle"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_style_round"
+                android:text="Confirm" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

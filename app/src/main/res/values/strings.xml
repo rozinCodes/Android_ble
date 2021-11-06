@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">Fit Pro</string>
+    <string name="title_measurements">Measurements</string>
+    <string name="title_tracking">Tracking</string>
+    <string name="title_account">My Account</string>
+
+    <string name="title_unassigned">Unassigned Data</string>
+    <string name="title_change_unit">Change Unit</string>
+    <string name="title_weight_unit">Weight Unit</string>
+    <string name="title_length_unit">Length Unit</string>
+    <string name="title_reminders">Measurement Reminders</string>
+    <string name="title_comparison">Data Comparison</string>
+    <string name="title_change_pass">Change Password</string>
+    <string name="title_about">About</string>
+    <string name="title_contact">Contact Us</string>
+    <string name="title_forget_pass">Forget your password?</string>
+
+    <string name="max_limit_text">You have already added maximum number of user.</string>
+
+    <string name="bar_text_weight">One of the important indicator of health</string>
+    <string name="bar_text_heart_rate">A healthy adult heart rate has a bpm of 60 to 100. The average heart rate is 60 to 80 bpm. Females tend to have a faster heart rate.</string>
+    <string name="bar_text_bmi">Body Mass Index</string>
+    <string name="bar_text_body_fat">Body composition fat tissue ratio</string>
+    <string name="bar_text_none">This feature will available soon. We\'re working on it.</string>
+
+    <string name="hint_feedback">We welcome comments, feedback and questions. We will respond to them as soon as we can.</string>
+    <string name="feedback_length">0/500</string>
+
+    <string name="forgot_code_notice">Your verification code will be sent to your email. The verification code expires in 30 minutes. \n\n
+        Make sure your email address is correct. If the email doesn\'t arrive in your inbox in a few minutes, check your spam or junk folder or try resending again (after two minutes).
+    </string>
+
+    <string name="empty_data_text">Track more than just weight. Step on the scale to know more</string>
+
+    <string name="measurements_text">The data results are only used for sports and fitness monitoring reference.
+        They can not be used as the data basis for medical equipment. For decisions concerning diagnosis and treatment,
+        please consult doctors and other medical staff for advice.
+    </string>
+
+    <string name="athlete_modle">Athlete mode</string>
+    <string name="athlete_modle_desc">This mode is suitable for people who have long been engaged in physical exercise or who regularly exercise. This model will adjust the body composition calculation model (only applicable to people aged 18 and above).</string>
+
+    <string name="user_info_hint">Entering your information helps us accurately calculate your body metrics, such as body fat, muscle mass, and BMI</string>
+
+    <string name="UserInfoViewController_accountRegistration">Create %1$s account (optional)</string>
+
+    <string name="permission_camera_storage"> Need Camera and Storage Permissions! </string>
+    <string name="permission_camera_storage_needed"> This app needs camera and storage permissions to take pictures from the gallery or with the camera. </string>
+    <string name="permission_rejected"> Permission not Granted! </string>
+
+    <string-array name="items">
+        <item>Weight</item>
+        <item>Heart Rate</item>
+        <item>Cardiac Index</item>
+        <item>BMI</item>
+        <item>Body Fat</item>
+        <item>Body Type</item>
+        <item>Fat Free Body Weight</item>
+        <item>Subcutaneous Fat</item>
+        <item>Visceral Fat</item>
+        <item>Skeletal Muscle</item>
+        <item>Muscle Mass</item>
+        <item>Body Water</item>
+        <item>Bone Mass</item>
+        <item>Protein</item>
+        <item>BMR</item>
+        <item>Metabolic Age</item>
+    </string-array>
+
+    <string name="weight">weight</string>
+    <string name="heart_rate">heart rate</string>
+    <string name="cardiac_index">cardiac index</string>
+    <string name="bmi">bmi</string>
+    <string name="body_fat">body fat</string>
+    <string name="fat_free_body_weight">fat-free body weight</string>
+    <string name="subcutaneous_fat">subcutaneous fat</string>
+    <string name="visceral_fat">visceral fat</string>
+    <string name="body_water">body water</string>
+    <string name="skeletal_muscle">skeletal muscle</string>
+    <string name="muscle_mass">muscle mass</string>
+    <string name="bone_mass">bone mass</string>
+    <string name="protein">protein</string>
+    <string name="bmr">bmr</string>
+    <string name="metabolic_age">metabolic age</string>
+
+
+    <string name="type_very_low">Severe low</string>
+    <string name="type_low">low</string>
+    <string name="type_standar">standard</string>
+    <string name="type_high">high</string>
+    <string name="type_very_high">Severe high</string>
+    <string name="type_sufficient">sufficient</string>
+    <string name="type_shape_fueling">endomorphy type</string>
+    <string name="type_shape_full_figured">Full-figured type</string>
+    <string name="type_shape_invisible_obesity">Invisible obesity type</string>
+    <string name="type_shape_standard">standard type</string>
+    <string name="type_shape_standard_muscle">Standard muscle type</string>
+    <string name="type_shape_very_muscular">Very muscular type</string>
+    <string name="type_shape_lean">Lean type</string>
+    <string name="type_shape_lean_and_muscular">Lean and muscular type</string>
+    <string name="type_shape_hypokinesia">hypokinesia type</string>
+    <string name="type_reach_standard">Up to standard</string>
+    <string name="type_not_reach_standard">Not up to standard</string>
+    <string name="type_shape_none">No type</string>
+    <string name="no_standard">No standard </string>
+    <string name="fatty_liver_risk_level0">Level 0: no risk of fatty liver disease</string>
+    <string name="fatty_liver_risk_level1">Level I: risk of fatty liver disease</string>
+    <string name="fatty_liver_risk_level2">Level II: risk of mild fatty liver disease</string>
+    <string name="fatty_liver_risk_level3">Level III: risk of moderate fatty liver disease</string>
+    <string name="fatty_liver_risk_level4">IV:risk of severe fatty liver disease</string>
+</resources>

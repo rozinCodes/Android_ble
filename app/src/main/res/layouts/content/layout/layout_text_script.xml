@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false">
+
+    <TextView
+        android:id="@+id/normalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:text="normal"
+        android:textSize="18sp"
+        tools:text="Hello" />
+
+    <TextView
+        android:id="@+id/superscriptTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/normalTextView"
+        android:layout_toRightOf="@id/normalTextView"
+        android:text="super"
+        android:textColor="#aa0000"
+        android:textSize="8sp"
+        tools:text="SuperScript" />
+
+    <TextView
+        android:id="@+id/subscriptTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/normalTextView"
+        android:layout_toRightOf="@id/normalTextView"
+        android:text="sub"
+        android:textColor="#00aa00"
+        android:textSize="8sp"
+        tools:text="SubScript" />
+
+</RelativeLayout>

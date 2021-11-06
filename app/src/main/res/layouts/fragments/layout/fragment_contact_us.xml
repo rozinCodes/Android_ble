@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_100"
+    android:padding="12dp"
+    tools:context=".view.ContactUsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/confirmBtn_Rly"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/email_Fly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false">
+
+                <com.waltonbd.smartscale.widget.EditTextWithClear
+                    android:id="@+id/emailAddressEt"
+                    style="@style/user_register"
+                    android:layout_marginStart="16dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="17sp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false">
+
+                <EditText
+                    android:id="@+id/feedbackEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/hint_feedback"
+                    android:importantForAutofill="no"
+                    android:maxLength="@integer/max_feedback_length"
+                    android:textSize="17sp"
+                    tools:ignore="TextFields" />
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textLimitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/feedback_length"
+            android:textColor="@color/md_grey_700" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirmBtn_Rly"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp">
+
+        <Button
+            android:id="@+id/confirmBtn"
+            style="@style/MyButtonStyle"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_style_round"
+            android:text="Confirm" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

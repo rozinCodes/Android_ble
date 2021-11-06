@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.tracking.TrackingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Weight"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/chart_switch_history_image" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginEnd="20dip"
+        android:orientation="horizontal">
+
+        <com.chayan.toggleswitch.widgets.ToggleSwitch
+            android:id="@+id/daysFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderRadius="20dp"
+            app:borderWidth="1dp"
+            app:textToggleCenter="Month"
+            app:textToggleLeft="Week"
+            app:textToggleRight="Year" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/chart_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="10dip"
+        android:layout_weight="1.0"
+        android:padding="6dip">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/indexRlv"
+        android:layout_width="fill_parent"
+        android:layout_height="90dip"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="6dip"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/index_row" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15.0dip">
+
+        <TextView
+            android:id="@+id/dayPartTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30.0dip"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/measurementFragment"
+        android:icon="@drawable/selector_measurement"
+        android:title="@string/title_measurements" />
+
+    <item
+        android:id="@+id/trackingFragment"
+        android:icon="@drawable/selector_tracking"
+        android:title="@string/title_tracking" />
+
+    <item
+        android:id="@+id/accountFragment"
+        android:icon="@drawable/selector_account"
+        android:title="@string/title_account" />
+
+</menu>

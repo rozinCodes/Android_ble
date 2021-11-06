@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.WeightUnitFragment">
+
+    <RadioButton
+        android:id="@+id/radio_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:button="@null"
+        android:checked="true"
+        android:drawableEnd="@drawable/btn_radio"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:text="inch" />
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="26dp"
+        android:background="@color/md_grey_200" />
+
+    <RadioButton
+        android:id="@+id/radio_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:button="@null"
+        android:drawableEnd="@drawable/btn_radio"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:text="cm" />-->
+
+</RadioGroup>

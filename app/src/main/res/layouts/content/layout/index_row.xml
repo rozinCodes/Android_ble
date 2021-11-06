@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="indexData"
+            type="com.waltonbd.smartscale.models.IndexItem" />
+
+        <variable
+            name="OnItemClickListener"
+            type="com.waltonbd.smartscale.adapters.IndexRlyAdapter.OnItemClickListener" />
+    </data>
+
+    <!--android:onClick="@{() -> OnItemClickListener.onItemClick(indexData)}"-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/up_triangle"
+            android:visibility="invisible"
+            app:tint="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/indexImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/index_normal"
+            android:padding="8dp"
+            android:src="@{indexData.image, default=@drawable/report_weight}"/>
+
+        <TextView
+            android:id="@+id/indexNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@{indexData.name}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</layout>

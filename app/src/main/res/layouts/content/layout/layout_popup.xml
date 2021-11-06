@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Sheet that contains your items -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="6dp"
+    app:elevation="0dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/manualInput"
+            style="@style/TextAppearance.PopupWindow.Item"
+            android:layout_width="match_parent"
+            android:text="Manual input"
+            app:drawableLeftCompat="@drawable/measure_fragment_hand_measure" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200" />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deviceManagement"
+            style="@style/TextAppearance.PopupWindow.Item"
+            android:text="Device Management"
+            app:drawableLeftCompat="@drawable/measure_fragment_device_manager_image" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_200" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dataCompare"
+                style="@style/TextAppearance.PopupWindow.Item"
+                android:text="Data Comparision"
+                app:drawableLeftCompat="@drawable/measure_fragment_correlation_data_image" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_200" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/share"
+                style="@style/TextAppearance.PopupWindow.Item"
+                android:text="Share"
+                app:drawableLeftCompat="@drawable/share_image" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

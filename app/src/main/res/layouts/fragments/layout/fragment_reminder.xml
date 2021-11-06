@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_100"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".view.ReminderFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvReminder_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="26dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="20dp"
+                android:text="07:00 AM"
+                android:textSize="28sp" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/reminderSw_1"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="26dp"
+                app:sb_show_indicator="false" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvReminder_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="26dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="20dp"
+                android:text="01:00 PM"
+                android:textSize="28sp" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/reminderSw_2"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="26dp"
+                app:sb_show_indicator="false" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvReminder_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="26dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="20dp"
+                android:text="07:00 PM"
+                android:textSize="28sp" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/reminderSw_3"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="26dp"
+                app:sb_show_indicator="false" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

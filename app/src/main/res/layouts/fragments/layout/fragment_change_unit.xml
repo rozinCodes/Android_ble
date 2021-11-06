@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="0dp"
+    tools:context=".view.ChangeUnitFragment">
+
+    <TextView
+        android:id="@+id/weightUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="Weight Unit"
+        android:textColor="@color/md_grey_800"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/system_item_arrow" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/md_grey_250" />
+
+    <TextView
+        android:id="@+id/lengthUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="Length Unit"
+        android:textColor="@color/md_grey_800"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/system_item_arrow" />
+
+</LinearLayout>

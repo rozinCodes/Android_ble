@@ -1,0 +1,24 @@
+POST
+{BASE_URL}/api/auth/signin
+
+# Headers
+@Content-Type: application/json
+
+# Body
+{
+  "username": "{username}",
+  "password": "{password}"
+}
+
+%%%
+# POST
+# /api/auth/signin
+# Headers
+# @Content-Type: application/json
+# Body
+# {
+#   "username": "{username}",
+#   "password": "{password}"
+# }
+
+# Error: java.lang.IllegalArgumentException: Expected URL scheme 'http' or 'https' but no colon was found

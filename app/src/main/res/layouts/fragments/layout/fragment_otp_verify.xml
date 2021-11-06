@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.waltonbd.smartscale.view.OTPVerifyFragment" />
+
+        <variable
+            name="viewModel"
+            type="com.waltonbd.smartscale.viewmodels.ForgetPasswordViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_100"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <View
+                    style="@style/user_register_line_style"
+                    android:layout_below="@+id/emailAddressEt" />
+
+                <com.waltonbd.smartscale.widget.EditTextWithClear
+                    android:id="@+id/emailAddressEt"
+                    style="@style/user_register"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.email}"
+                    app:drawableStartCompat="@drawable/user_register_email" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/authCodeEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_toStartOf="@+id/verificationCodeStatusIv"
+                    android:background="@null"
+                    android:drawablePadding="19dp"
+                    android:hint="Verification Code"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:text="@={viewModel.code}"
+                    app:drawableStartCompat="@drawable/user_register_verification" />
+
+                <ImageView
+                    android:id="@+id/verificationCodeStatusIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="130dp"
+                    android:src="@drawable/verification_code_right"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/getCodeBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/button_style_round"
+                    android:enabled="@{viewModel.enable}"
+                    android:onClick="@{()-> viewModel.onSendClicked()}"
+                    android:padding="@dimen/margin_0dp"
+                    android:text="Send"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <View
+                    style="@style/user_register_line_style"
+                    android:layout_below="@+id/authCodeEt" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/forgetPwdConfirmBtn"
+            style="@style/MyButtonStyle"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="25dp"
+            android:onClick="@{()-> viewModel.onNextClicked()}"
+            android:text="Next" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.3"
+            android:text="@string/forgot_code_notice"
+            android:textColor="@color/md_grey_800"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</layout>

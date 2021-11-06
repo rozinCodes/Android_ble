@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/round_shape" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="03"
+                android:textColor="@color/md_grey_800"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:17 PM"
+                android:textColor="@color/md_grey_800"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/md_grey_250" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Weight"
+                android:textColor="@color/md_grey_700" />
+
+            <com.waltonbd.smartscale.widget.TextScriptView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:normalBetweenScriptMargin="4dp"
+                app:normalText="15.60"
+                app:normalTextColor="@color/md_grey_800"
+                app:normalTextSize="20sp"
+                app:subText="kg"
+                app:subTextColor="@color/md_grey_800"
+                app:subTextSize="14sp"
+                app:superText=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Body Fat"
+                android:textColor="@color/md_grey_700" />
+
+            <com.waltonbd.smartscale.widget.TextScriptView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:normalBetweenScriptMargin="4dp"
+                app:normalText="23.6"
+                app:normalTextColor="@color/md_grey_800"
+                app:normalTextSize="20sp"
+                app:subText="%"
+                app:subTextColor="@color/md_grey_800"
+                app:subTextSize="14sp"
+                app:superText=" " />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

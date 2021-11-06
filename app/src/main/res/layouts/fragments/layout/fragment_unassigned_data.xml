@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_200"
+    tools:context=".view.UnassignedDataFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/unassignedRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/unassigned_Rly"
+        android:nestedScrollingEnabled="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="2"
+        tools:listitem="@layout/unassigned_list_row" />
+
+    <ProgressBar
+        android:id="@+id/data_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:indeterminateTintMode="src_in" />
+
+    <TextView
+        android:id="@+id/noRecordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No data available"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:id="@+id/unassigned_Rly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clipToPadding="false"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteBtn"
+            style="@style/MyButtonStyle"
+            android:layout_weight="1"
+            android:background="@drawable/button_style_round_white"
+            android:text="Delete"
+            android:textColor="@color/colorPrimary" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/assignBtn"
+            style="@style/MyButtonStyle"
+            android:layout_weight="1"
+            android:text="Assign" />
+
+    </LinearLayout>
+
+</RelativeLayout>

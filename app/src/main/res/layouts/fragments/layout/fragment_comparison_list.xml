@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_200"
+    tools:context=".view.ComparisonListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comparisonListRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/comparisonBtn"
+        tools:itemCount="2"
+        android:nestedScrollingEnabled="false"
+        tools:listitem="@layout/comparison_list_row" />
+
+    <Button
+        android:id="@+id/comparisonBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Comparison"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/noRecordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No data available"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+include ':app'
+include ':toggleswitch'
+include ':expandedgridrecyler'
+rootProject.name = "Smart Scale"

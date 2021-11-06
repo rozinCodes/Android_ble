@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.WeightUnitFragment">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableEnd="@drawable/btn_radio"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:tag="kg"
+            android:text="kg" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="26dp"
+            android:background="@color/md_grey_200" />
+
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawableEnd="@drawable/btn_radio"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:tag="lb"
+            android:text="lb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="26dp"
+            android:background="@color/md_grey_200" />
+
+        <RadioButton
+            android:id="@+id/radio_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawableEnd="@drawable/btn_radio"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:tag="st"
+            android:text="st + lb" />
+
+    </RadioGroup>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="26dp"
+        android:text="Note: Some devices do not support st units, and the device will display lb"
+        android:textColor="@color/md_grey_500" />-->
+
+</LinearLayout>

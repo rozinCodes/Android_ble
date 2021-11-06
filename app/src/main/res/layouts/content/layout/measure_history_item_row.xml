@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.waltonbd.smartscale.models.MeasuredItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <com.waltonbd.smartscale.widget.TextScriptView
+            android:id="@+id/tvValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            app:normalText="@{data.value}"
+            app:normalTextColor="@color/textPrimary"
+            app:normalTextSize="15sp"
+            app:subText="@{data.subValue}"
+            app:subTextColor="@color/textPrimary"
+            app:subTextSize="11sp"
+            app:superText=" " />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{data.label}"
+            android:textAlignment="center"
+            android:textColor="@color/md_grey_500"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</layout>

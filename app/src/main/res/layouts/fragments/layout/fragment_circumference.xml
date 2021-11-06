@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.CircumferenceFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:orientation="horizontal">
+
+        <com.chayan.toggleswitch.widgets.ToggleSwitch
+            android:id="@+id/daysFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:borderRadius="20dp"
+            app:borderWidth="1dp"
+            app:textToggleCenter="Month"
+            app:textToggleLeft="Week"
+            app:textToggleRight="Year" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip">
+
+        <TextView
+            android:id="@+id/dateValueTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30.0dip"
+            android:drawablePadding="5.0dip"
+            android:textColor="#ff999999"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/date_arrow_right" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/chart_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_weight="1.0">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/indexRlv"
+        android:layout_width="fill_parent"
+        android:layout_height="90.0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5.0dip"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/index_row" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15.0dip">
+
+        <TextView
+            android:id="@+id/dayPartTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30.0dip"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

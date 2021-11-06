@@ -1,0 +1,168 @@
+<resources>
+
+    <!-- just defines top layer "Animation" -->
+    <style name="Animation" />
+
+    <!-- the animations must have been defined in your "anim" folder, of course -->
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="MaterialAlertDialogRounded" parent="@style/Theme.MaterialComponents.Light.Dialog">
+        <item name="shapeAppearanceOverlay">@style/DialogCorners</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="DialogCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="MyButtonStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">clip_horizontal</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@drawable/button_style_round</item>
+        <item name="android:layout_width">310dp</item>
+        <item name="android:layout_height">42dp</item>
+    </style>
+
+    <style name="TextAppearance.ItemList" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selectable_item_background</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:fadingEdgeLength">40dp</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/md_grey_850</item>
+        <item name="android:drawablePadding">22dp</item>
+    </style>
+
+    <style name="TabTextAppearance.TabWidget" parent="">
+        <item name="android:textColor">@color/tabTextColor</item>
+        <item name="android:textColorHighlight">@color/tabSelectedTextColor</item>
+        <item name="android:textSize">14.5sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    `
+
+    <style name="IconOnlyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+
+    <style name="TextAppearance.PopupWindow.Item" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <!--<item name="android:background">?attr/selectableItemBackground</item>-->
+        <!--<item name="android:clickable">true</item>-->
+        <!--<item name="android:fontFamily">@font/opensans_regular</item>-->
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:drawablePadding">12dp</item>
+    </style>
+
+    <style name="user_text_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/md_grey_400</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+    </style>
+
+    <style name="user_info_style_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="edit_user_line_style">
+        <item name="android:background">@color/md_grey_150</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="user_register_line_style">
+        <item name="android:background">@color/md_grey_250</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="user_info_style_arrow">
+        <item name="android:layout_gravity">
+            left|right|center_horizontal|fill_horizontal|clip_horizontal
+        </item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="user_register">
+        <!--<item name="android:textColorHint">@color/md_grey_400</item>-->
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+
+    <style name="MaterialAlertDialog.Rounded" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay.MaterialAlertDialog.Rounded
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialAlertDialog.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
+    <style name="bar_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColorHint">@color/md_grey_400</item>
+    </style>
+
+    <style name="bar_desc_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColorHint">@color/md_grey_400</item>
+    </style>
+
+</resources>

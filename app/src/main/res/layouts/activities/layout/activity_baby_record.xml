@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+
+        <TextView
+            android:id="@+id/baby_measure_short_Tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@drawable/baby_measure_short_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleBar_Rly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <!--<include layout="@layout/include_title_bar" />-->
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baby_record_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/baby_camera_rl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/baby_camera_bg_Iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baby_record_camera_bg" />
+
+                <com.waltonbd.smartscale.custom.RoundAngleImageView
+                    android:id="@+id/baby_header_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:id="@+id/baby_camera_Rly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="47dp">
+
+                    <ImageView
+                        android:id="@+id/baby_camera_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/baby_record_camera" />
+
+                    <ImageView
+                        android:id="@+id/baby_camera_bg_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/baby_record_camera_centre" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/baby_camera_Tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/baby_camera_Rly"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="Add photos to record the baby’s growth\10"
+                    android:textColor="#2dc2f6"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/close_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/icon_close_round" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/weight_unit_no_st"
+                android:layout_width="match_parent"
+                android:layout_height="62.5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingStart="17.5dp"
+                android:paddingEnd="23dp">
+
+                <ImageView
+                    android:id="@+id/weight_point_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baby_record_point" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/weight_point_iv"
+                    android:text="Weight"
+                    android:textColor="#525558"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/weight_unit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="kg"
+                    android:textColor="#2a2e31"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/baby_record_weight_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/weight_unit_tv"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="0~50.0"
+                    android:inputType="numberDecimal"
+                    android:textColor="#2a2e31"
+                    android:textColorHint="#909090"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/weight_unit_st_Rly"
+                android:layout_width="match_parent"
+                android:layout_height="62.5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingStart="17.5dp"
+                android:paddingEnd="23dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/weight_point_st_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baby_record_point" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/weight_point_st_iv"
+                    android:text="Weight"
+                    android:textColor="#525558"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/weight_unit_lb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="lb"
+                    android:textColor="#2a2e31"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/baby_record_weight_lb_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/weight_unit_lb_tv"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="0.0~13.9"
+                    android:inputType="numberDecimal"
+                    android:textColor="#2a2e31"
+                    android:textColorHint="#909090"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/weight_unit_st_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/baby_record_weight_lb_et"
+                    android:text="st"
+                    android:textColor="#2a2e31"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/baby_record_weight_st_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/weight_unit_st_tv"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="0~7"
+                    android:inputType="number"
+                    android:textColor="#2a2e31"
+                    android:textColorHint="#909090"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ebedf0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="62.5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingStart="17.5dp"
+                android:paddingEnd="23dp">
+
+                <ImageView
+                    android:id="@+id/height_point_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baby_record_point" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/height_point_iv"
+                    android:text="height"
+                    android:textColor="#525558"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/height_unit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="cm"
+                    android:textColor="#2a2e31"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/baby_record_height_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="11dp"
+                    android:layout_toStartOf="@+id/height_unit_tv"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="30.0~130.0"
+                    android:inputType="numberDecimal"
+                    android:textColor="#2a2e31"
+                    android:textColorHint="#909090"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ebedf0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="62.5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingStart="17.5dp"
+                android:paddingEnd="23dp">
+
+                <ImageView
+                    android:id="@+id/girth_point_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baby_record_point" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/girth_point_iv"
+                    android:text="Head circumference"
+                    android:textColor="#525558"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/girth_unit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="cm"
+                    android:textColor="#2a2e31"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/baby_record_girth_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/girth_unit_tv"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="30.0~59.0"
+                    android:inputType="numberDecimal"
+                    android:textColor="#2a2e31"
+                    android:textColorHint="#909090"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ebedf0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="62.5dp"
+                android:paddingStart="17.5dp"
+                android:paddingEnd="23dp">
+
+                <ImageView
+                    android:id="@+id/date_point_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baby_record_point" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/date_point_iv"
+                    android:text="Date"
+                    android:textColor="#525558"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="2020年5月20日"
+                    android:textColor="#2a2e31"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ebedf0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:minHeight="80dp">
+
+                <Button
+                    android:id="@+id/confirmBtn"
+                    android:layout_width="310dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="record"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
